@@ -26,3 +26,29 @@ if args.percent:
 items = sorted(counts[args.key].items(), key=lambda item: (item[1],item[0]), reverse=True)
 for k,v in items:
     print(k,':',v)
+
+
+import time
+import matplotlib.pyplot as plt
+
+data_lang = {}
+with open('reduced.lang','r') as f:
+        for line in f:
+            if not line:
+                continue
+            values = line.split()
+            if len(values) != 2:
+                continue
+            key, value = line.strip().split()
+            data_lang[key] = int(value)
+
+sorted_data1 = sorted(data_lang.items(), key=lambda x: x[1])[:10]
+keys1 = [x[0] for x in sorted_data1]
+values1 = [x[1] for x in sorted_data1]
+
+plt.bar(keys1, values1)
+plt.xlabel('languages')
+plt.ylabel('count')
+plt.title('Top 10 languages of twitter tweets tweeted')
+plt.savefig('figure1.png')
+plt.clf()
