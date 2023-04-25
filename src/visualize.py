@@ -51,4 +51,4 @@ plt.xlabel('languages')
 plt.ylabel('count')
 plt.title('Top 10 languages of twitter tweets tweeted')
 plt.savefig('figure1.png')
-plt.clf()
+
