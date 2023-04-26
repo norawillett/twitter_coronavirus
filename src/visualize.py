@@ -46,9 +46,17 @@ sorted_data1 = sorted(data_lang.items(), key=lambda x: x[1])[:10]
 keys1 = [x[0] for x in sorted_data1]
 values1 = [x[1] for x in sorted_data1]
 
-plt.bar(keys1, values1)
-plt.xlabel('languages')
-plt.ylabel('count')
-plt.title('Top 10 languages of twitter tweets tweeted')
-plt.savefig('figure1.png')
+#plt.bar(keys1, values1)
+#plt.xlabel('languages')
+#plt.ylabel('count')
+#plt.title('Top 10 languages of twitter tweets tweeted')
+#plt.savefig('figure1.png')
+
+
+
+import time
+fig = plt.figure()
+plt.bar(['a', 'b', 'c'], [1, 3, 2])
+plt.savefig('output.png')
+plt.show()
 
