@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import matplotlib
+matplotlib.use('Agg')
 
 # command line args
 import argparse
@@ -31,32 +33,29 @@ for k,v in items:
 import time
 import matplotlib.pyplot as plt
 
-data_lang = {}
-with open('reduced.lang','r') as f:
-        for line in f:
-            if not line:
-                continue
-            values = line.split()
-            if len(values) != 2:
-                continue
-            key, value = line.strip().split()
-            data_lang[key] = int(value)
-
-sorted_data1 = sorted(data_lang.items(), key=lambda x: x[1])[:10]
+with open('reduced.country') as f:
+    data2 = f.read()
+    data = json.loads(data2)
+    data_key = data[str(args.key)]
+    print("data_key=", data_key)
+    lang_nums = [v for v in data_key.values()]
+    countries = [k for k in data_key.keys()]
+print("countries=", countries)
+sorted_data = sorted(data_key.items(), key=lambda x: x[1])
+sorted_data1 = sorted_data[-10:]
+print("sorted_data1=", sorted_data1)
 keys1 = [x[0] for x in sorted_data1]
 values1 = [x[1] for x in sorted_data1]
-
-#plt.bar(keys1, values1)
-#plt.xlabel('languages')
-#plt.ylabel('count')
-#plt.title('Top 10 languages of twitter tweets tweeted')
-#plt.savefig('figure1.png')
-
-
-
-import time
+print("values1=", values1)
+import numpy as np
 fig = plt.figure()
-plt.bar(['a', 'b', 'c'], [1, 3, 2])
-plt.savefig('output.png')
-plt.show()
+n = len(keys1)
+ind = np.arange(n)
+plt.bar(ind, values1)
+plt.xticks(ind, keys1)
+plt.xlabel('Language')
+plt.ylabel('# of Tweets')
+plt.title('The Top 10 countries "#코로나바이러스" was tweeted in 2020')
+plt.savefig('Task_3_Figure_4.png')
+
 
