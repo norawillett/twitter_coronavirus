@@ -19,7 +19,7 @@ I have included 4 graphs to show my findings from the project. The first image s
 
 <img src=figure1.png width=400px/>
 
-**Figure 2:# 코로나바이러스(Coronavirus in Korean) by Language**
+**Figure 2:# 코로나바이러스 by Language**
 
 <img src=figure2.png width=400px/>
 
@@ -28,7 +28,7 @@ I have included 4 graphs to show my findings from the project. The first image s
 
 <img src=figure3.png width=400px/>
 
-**Figure 4:# 코로나바이러스(Coronavirus in Korean) by Country**
+**Figure 4:# 코로나바이러스 by Country**
 
 <img src=figure4.png width=400px/>
 
