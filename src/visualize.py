@@ -53,9 +53,9 @@ n = len(keys1)
 ind = np.arange(n)
 plt.bar(ind, values1)
 plt.xticks(ind, keys1)
-plt.xlabel('Language')
+plt.xlabel('Country')
 plt.ylabel('# of Tweets')
-plt.title('The Top 10 countries "#코로나바이러스" was tweeted in 2020')
-plt.savefig('Task_3_Figure_4.png')
+plt.title('#Coronavirus in Korean by Country')
+plt.savefig('figure4.png')
 
 
