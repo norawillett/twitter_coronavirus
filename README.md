@@ -8,8 +8,7 @@ The aim of this project is to summarize tweets that mentioned coronavirus in var
 
 **Process**
 
-This project required using shell scripts, navigating the lambda server, as well as learning and implementing libraries for visualizing data. To parse through all 1.1 billion tweets, I followed the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) procedure and uses parallel processing. To parse through all of the files in the dataset, I used my map.py file, which kept track of the hashtags as well as the language and country code for each file. To put all of this information into two simplified files (one file for the languages and the other for the country code), my reduce.py file merged all of the outputs into a dictionary. I could then use these two files to graph and visualize the output. The shell script can be found in my run_maps.sh file. 
-
+This project required using shell scripts, navigating the lambda server, as well as learning and implementing libraries for visualizing data. To parse through all 1.1 billion tweets, I followed the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) procedure and used parallel processing. To parse through all of the files in the dataset, I used my map.py file, which kept track of the hashtags as well as the language and country code for each file. To put all of this information into two simplified files (one file for the languages and the other for the country code), my reduce.py file merged all of the outputs into a dictionary. I could then use these two files to graph and visualize the output. The shell script can be found in my run_maps.sh file. 
 
 ## Findings
 
