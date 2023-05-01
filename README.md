@@ -1,15 +1,15 @@
 # Coronavirus twitter analysis
 
-##Aim of Project
+## Project Overview
 
 The aim of this project is to summarize tweets that mentioned coronavirus in various languages and other related words in the year 2020. The dataset used for my analysis comes from the lambda server’s /data/Twitter dataset folder and contains roughly 1.1 billion tweets. One interesting quality of this data set is that some of the tweets are geotagged, meaning they contain the location information from where the tweet was sent. My analysis incorporates this geotagged location to grasp where these tweets are sent from. Furthermore, my analysis looks at tweets in other languages, including Korean, Japanese, and Chinese. 
 
-##Background
+## Background
 
 **Process**
 This project required using shell scripts, navigating the lambda server, as well as learning and implementing libraries for visualizing data. To parse through all 1.1 billion tweets, I followed the MapReduce procedure and uses parallel processing. To parse through all of the files in the dataset, I used my map.py file, which kept track of the hashtags as well as the language and country code for each file. To put all of this information into two simplified files (one file for the languages and the other for the country code), my reduce.py file merged all of the outputs into a dictionary. I could then use these two files to graph and visualize the output. The shell script can be found in my run_maps.sh file. 
 
-##Findings
+## Findings
 
 I have included 4 graphs to show my findings from the project. The first image shows the top ten languages #coronavirus was mentioned, and my second image shows the top 10 languages #코로나바이러스 (this is #coronavirus in Korean) was mentioned. My graphs show that English and Spanish were the top 2 countries for #coronavirus being tweeted, and Korean was by far the top language #코로나바이러스 was tweeted in. My third and fourth images show the top ten countries #coronavirus and #코로나바이러스 were mentioned in. #coronavirus was mentioned most in the United States, India, and Great Britain. #코로나바이러스 was tweeted the most by South Korea. 
 
@@ -21,8 +21,20 @@ To look at tweets over the course of 2020, I used my alternative_reduce file. Th
 
 <img src=figure1.png width=400px/>
 
+**Figure 2:# 코로나바이러스(Coronavirus in Korean) by Language**
 
-##Conclusion
+<img src=figure2.png width=400px/>
+
+
+**Figure 3: #Coronavirus in English by Country**
+
+<img src=figure3.png width=400px/>
+
+**Figure 4:# 코로나바이러스(Coronavirus in Korean) by Country**
+
+<img src=figure4.png width=400px/>
+
+## Conclusion
 
 
 Overall, this project utilized the power of glob to go through hundreds of files, as well as tools to run programs in the background (even when I am not on my computer). I learned how to utilize the matplotlib library and manipulate inputs and datasets to better understand data. Surprisingly, the biggest challenge I faced in this project was manipulating my graphs. Before completing this project, I imagined that going through all 1.1 billion tweets would be the most difficult part! Going forward, I hope to learn more about visualization methods and how to show data in new, unique forms. 
