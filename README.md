@@ -8,7 +8,7 @@ The aim of this project is to summarize tweets that mentioned coronavirus in var
 
 **Process**
 
-This project required using shell scripts, navigating the lambda server, as well as learning and implementing libraries for visualizing data. To parse through all 1.1 billion tweets, I followed the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) procedure and used parallel processing. To parse through all of the files in the dataset, I used my map.py file, which kept track of the hashtags as well as the language and country code for each file. To put all of this information into two simplified files (one file for the languages and the other for the country code), my reduce.py file merged all of the outputs into a dictionary. I could then use these two files to graph and visualize the output. The shell script can be found in my run_maps.sh file. 
+This project required using shell scripts, navigating the lambda server, as well as learning and implementing libraries for visualizing data. To parse through all 1.1 billion tweets, I followed the [MapReduce](https://en.wikipedia.org/wiki/MapReduce) procedure and used parallel processing. To parse through all of the files in the dataset, I used my `map.py` file, which kept track of the hashtags as well as the language and country code for each file. To put all of this information into two simplified files (one file for the languages and the other for the country code), my `reduce.py` file merged all of the outputs into a dictionary. I could then use these two files to graph and visualize the output. The shell script can be found in my `run_maps.sh` file. 
 
 ## Findings
 
@@ -35,7 +35,7 @@ I have included 7 graphs to show my findings from the project. The first image s
 
 ## Analysis Over Time
 
-To look at tweets over the course of 2020, I used my alternative_reduce file. This took in multiple hashtags as input and creates a plot with the number of tweets sent in 2020 that mention those tweets (with the date on the x-axis). This is a helpful graphical tool to see the number of tweets that change over the course of 2020 relative to other hashtags. I looked at #coronavirus and #corona and found that they followed a similar trend (coronavirus_corona.png). My graph showed that #corona was used more than #coronavirus, which I found surprising. Other graphs can be used by changing the input (—keys). I compared the syntax of #covid19 vs. #covid-19 and found that #covid19 was far more popular than #covid-19. I also found that #coronavirus was tweeted more at the start of the pandemic, then #covid19 became more popular towards the end.
+To look at tweets over the course of 2020, I used my `alternative_reduce file`. This took in multiple hashtags as input and creates a plot with the number of tweets sent in 2020 that mention those tweets (with the date on the x-axis). This is a helpful graphical tool to see the number of tweets that change over the course of 2020 relative to other hashtags. I looked at #coronavirus and #corona and found that they followed a similar trend (coronavirus_corona.png). My graph showed that #corona was used more than #coronavirus, which I found surprising. Other graphs can be used by changing the input (—keys). I compared the syntax of #covid19 vs. #covid-19 and found that #covid19 was far more popular than #covid-19. I also found that #coronavirus was tweeted more at the start of the pandemic, then #covid19 became more popular towards the end.
 
 **Figure 5: #Coronavirus vs. #Corona**
 
