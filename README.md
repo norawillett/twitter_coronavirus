@@ -35,7 +35,7 @@ I have included 7 graphs to show my findings from the project. The first image s
 
 ## Analysis Over Time
 
-To look at tweets over the course of 2020, I used my `alternative_reduce` file. This took in multiple hashtags as input and creates a plot with the number of tweets sent in 2020 that mention those tweets (with the date on the x-axis). This is a helpful graphical tool to see the number of tweets that change over the course of 2020 relative to other hashtags. I looked at #coronavirus and #corona and found that they followed a similar trend (coronavirus_corona.png). My graph showed that #corona was used more than #coronavirus, which I found surprising. Other graphs can be used by changing the input (—keys). I compared the syntax of #covid19 vs. #covid-19 and found that #covid19 was far more popular than #covid-19. I also found that #coronavirus was tweeted more at the start of the pandemic, then #covid19 became more popular towards the end.
+To look at tweets over the course of 2020, I used my `alternative_reduce` file. This took in multiple hashtags as input and created a plot with the number of tweets sent in 2020 that mention those hashtags. The date is on the x axis and the y axis is the number of tweets. This is a helpful visualization to see the number of tweets that change over the course of 2020 relative to other hashtags. I looked at #coronavirus and #corona and found that they followed a similar trend (Figure 5). My graph shows that #corona was used more than #coronavirus, which I found surprising (but I guess people picked up quickly that the Corona beer was not what they were necessarily referencing). I generated more graphs by changing the input (—keys). I compared the syntax of #covid19 vs. #covid-19 (Figure 6) and found that #covid19 was far more popular than #covid-19. I also found that #coronavirus was tweeted more at the start of the pandemic, then #covid19 became more popular towards the end (Figure 7). 
 
 **Figure 5: #Coronavirus vs. #Corona**
 
@@ -56,7 +56,7 @@ To look at tweets over the course of 2020, I used my `alternative_reduce` file. 
 ## Conclusion
 
 
-Overall, this project utilized the power of glob to go through hundreds of files, as well as tools to run programs in the background (even when I am not on my computer). I learned how to utilize the matplotlib library and manipulate inputs and datasets to better understand data. Surprisingly, the biggest challenge I faced in this project was manipulating my graphs. Before completing this project, I imagined that going through all 1.1 billion tweets would be the most difficult part! Going forward, I hope to learn more about visualization methods and how to show data in new, unique forms. 
+Overall, this project utilized the power of glob to go through hundreds of files containing hundreds of thousands of tweets, as well as tools to run programs in the background (even when I am not on my computer). I learned how to utilize the matplotlib library and manipulate inputs and datasets to better understand data. Surprisingly, the biggest challenge I faced in this project was manipulating my graphs. Before completing this project, I imagined that going through all 1.1 billion tweets would be the most difficult part! Going forward, I hope to learn more about visualization methods and how to show data in new, unique forms. 
 
 
 
